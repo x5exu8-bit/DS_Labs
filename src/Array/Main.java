@@ -9,14 +9,25 @@ public class Main {
         Arrayss arr=new Arrayss();
         int []numbers={1,2,3,4,5,8,6,8};
 
-        int result=arr.LinearSearch(numbers,9);
-        if(result!=-1)
-           System.out.println("value found at index:"+result);
-       else
-           System.out.println("value not found ");
+//        int result=arr.LinearSearch(numbers,9);
+//        if(result!=-1)
+//           System.out.println("value found at index:"+result);
+//       else
+//           System.out.println("value not found ");
 
         Arrays.sort(numbers);
         System.out.println(Arrays.binarySearch(numbers,5)); //هذه الي استدعيناها جاهزة من java
+
+        int result = arr.binarySearch(numbers, 5, 0, numbers.length - 1);
+        if (result != -1)
+            System.out.println("value found at index: " + result);
+        else
+            System.out.println("value not found");
+
+
+        arr.shift_left_delete(numbers, 2);
+        System.out.println(Arrays.toString(numbers));
+
 
 //        int []numbers2=new int [10];
 //        arr.input(numbers2);
